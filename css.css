@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    border : 1px solid black;
+}
+
+.navbar{
+    border : 1px, solid,black;
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 100px;
+    display: inline-block;
+}
+.navbar a {
+    text-decoration: none; /* Supprime le soulignement des liens dans la classe navbar */
+}
+
+
+.navbar li {
+     
+    display: inline-block; 
+    margin-right: 100px;    
+}
