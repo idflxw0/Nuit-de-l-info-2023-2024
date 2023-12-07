@@ -1,0 +1,35 @@
+body {
+    background-color: #253d52;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    text-align: center;
+}
+
+#question {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.answer-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #1c1c1c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.answer-button:hover {
+    background-color: #008ba3;
+}
