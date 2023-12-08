@@ -1,14 +1,17 @@
 // script.js
 const questions = [
     {
-        question: "Quelle est la capitale de la France ?",
+        question: "Parmi ces 5 propositions, quel est le gaz à effet de serre ?",
         answers: [
-            { text: "Paris", correct: true },
-            { text: "Berlin", correct: false },
-            { text: "Madrid", correct: false },
-            { text: "Londres", correct: false }
+            { text: "CO2, dioxyde de carbone", correct: false },
+            { text: "CH4, méthane", correct: false },
+            { text: "N2O, protoxyde d’azote", correct: false },
+            { text: "Tous ces gazs", correct: false }
         ],
-        introduction: "Paris est la capitale de la France. C'est une ville connue pour sa riche histoire et sa culture.",
+        introduction: "Ces 4 gazs sont différents type de gaz à effet de serre à longue durée de vie\n" +
+            "Le CO, le plus connu provient de la combustion des énergies fossiles, déforestation, …\n" +
+            "Le méthane provient principalement de l’élevage des ruminants, des exploitations pétrolières et gazières.\n" +
+            "L'azote est principalement dûes à l’utilisation d’engrais azotés et des procédés chimiques.",
         nextButton: "Suivant"
     },
     // Ajoutez d'autres questions de la même manière
