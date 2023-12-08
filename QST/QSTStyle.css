@@ -34,11 +34,10 @@ body {
     background-color: #008ba3;
 }
 
-#img {
+#displayPhoto1, #displayPhoto2, #displayPhoto3, #displayPhoto4, #displayPhoto5 {
     display: none;
-    max-width: 100%;
-    height: auto;
+    max-width: 50%;
+    height: 100%;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
+    margin-bottom: 20px; /* Ajout d'une marge en bas de l'image */
 }
