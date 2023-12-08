@@ -15,6 +15,18 @@ const questions = [
         nextButton: "Suivant"
     },
     // Ajoutez d'autres questions de la même manière
+
+    {
+        question: "Quelle est la capitale de la France ?",
+        answers: [
+            { text: "Paris", correct: true },
+            { text: "Berlin", correct: false },
+            { text: "Madrid", correct: false },
+            { text: "Londres", correct: false }
+        ],
+        introduction: "Paris est la capitale de la France. C'est une ville connue pour sa riche histoire et sa culture.",
+        nextButton: "Suivant"
+    },
 ];
 
 let currentQuestionIndex = 0;
