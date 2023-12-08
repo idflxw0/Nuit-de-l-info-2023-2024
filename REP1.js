@@ -95,7 +95,7 @@ function checkAnswer(isCorrect) {
         alert("Bonne réponse !\n\n" + currentQuestion.introduction);
         currentQuestionIndex++;
     } else {
-        // alert("Mauvaise réponse. Veuillez réessayer.");
+        //alert("Mauvaise réponse. Veuillez réessayer.");
         currentQuestionIndex = 0;
         nbfaut++;
         changePhoto(nbfaut);
@@ -112,7 +112,19 @@ function checkAnswer(isCorrect) {
 
 function changePhoto(selectedValue) {
     document.getElementById("container").style.display = "none";
+    //document.getElementById("nextButton").style.display = "block";
+    let nextbtn = document.getElementById("btnfaut");
+    nextbtn.style.display = "block";
+    nextbtn.addEventListener("click", function () {
+        document.getElementById("container").style.display = "block";
+        nextbtn.style.display = "none";
+        document.getElementById("displayPhoto1").style.display = "none";
+        document.getElementById("displayPhoto2").style.display = "none";
+        document.getElementById("displayPhoto3").style.display = "none";
+        document.getElementById("displayPhoto4").style.display = "none";
+        document.getElementById("displayPhoto5").style.display = "none";
 
+    });
     if (selectedValue === 1) {
         document.getElementById("displayPhoto1").style.display = "block";
     } else if (selectedValue === 2) {
