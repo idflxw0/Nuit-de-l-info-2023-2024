@@ -34,3 +34,25 @@ button {
 button:hover {
     background-color: #008ba3;
 }
+
+.answer-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-radius: 50%;
+    opacity: 0;
+    animation: explode 1s forwards;
+}
+
+@keyframes explode {
+    to {
+        transform: scale(1) translate(var(--x), var(--y));
+        opacity: 0;
+    }
+}

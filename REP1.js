@@ -114,28 +114,101 @@ function changePhoto(selectedValue) {
     document.getElementById("container").style.display = "none";
     //document.getElementById("nextButton").style.display = "block";
     let nextbtn = document.getElementById("btnfaut");
-    nextbtn.style.display = "block";
-    nextbtn.addEventListener("click", function () {
-        document.getElementById("container").style.display = "block";
-        nextbtn.style.display = "none";
-        document.getElementById("displayPhoto1").style.display = "none";
-        document.getElementById("displayPhoto2").style.display = "none";
-        document.getElementById("displayPhoto3").style.display = "none";
-        document.getElementById("displayPhoto4").style.display = "none";
-        document.getElementById("displayPhoto5").style.display = "none";
 
-    });
     if (selectedValue === 1) {
         document.getElementById("displayPhoto1").style.display = "block";
+        nextbtn.style.display = "block";
+        nextbtn.addEventListener("click", function () {
+            document.getElementById("container").style.display = "block";
+            nextbtn.style.display = "none";
+            document.getElementById("displayPhoto1").style.display = "none";
+            document.getElementById("displayPhoto2").style.display = "none";
+            document.getElementById("displayPhoto3").style.display = "none";
+            document.getElementById("displayPhoto4").style.display = "none";
+            document.getElementById("displayPhoto5").style.display = "none";
+
+        });
     } else if (selectedValue === 2) {
         document.getElementById("displayPhoto2").style.display = "block";
+        document.getElementById("faitchier").style.background = "#00546e";
+        nextbtn.style.display = "block";
+        nextbtn.addEventListener("click", function () {
+            document.getElementById("container").style.display = "block";
+            nextbtn.style.display = "none";
+            document.getElementById("displayPhoto1").style.display = "none";
+            document.getElementById("displayPhoto2").style.display = "none";
+            document.getElementById("displayPhoto3").style.display = "none";
+            document.getElementById("displayPhoto4").style.display = "none";
+            document.getElementById("displayPhoto5").style.display = "none";
+
+        });
     } else if (selectedValue === 3) {
         document.getElementById("displayPhoto3").style.display = "block";
+        document.getElementById("faitchier").style.background = "#014e69";
+        nextbtn.style.display = "block";
+        nextbtn.addEventListener("click", function () {
+            document.getElementById("container").style.display = "block";
+            nextbtn.style.display = "none";
+            document.getElementById("displayPhoto1").style.display = "none";
+            document.getElementById("displayPhoto2").style.display = "none";
+            document.getElementById("displayPhoto3").style.display = "none";
+            document.getElementById("displayPhoto4").style.display = "none";
+            document.getElementById("displayPhoto5").style.display = "none";
+
+        });
     } else if (selectedValue === 4) {
         document.getElementById("displayPhoto4").style.display = "block";
+        document.getElementById("faitchier").style.background = "#014862";
+        nextbtn.style.display = "block";
+        nextbtn.addEventListener("click", function () {
+            document.getElementById("container").style.display = "block";
+            nextbtn.style.display = "none";
+            document.getElementById("displayPhoto1").style.display = "none";
+            document.getElementById("displayPhoto2").style.display = "none";
+            document.getElementById("displayPhoto3").style.display = "none";
+            document.getElementById("displayPhoto4").style.display = "none";
+            document.getElementById("displayPhoto5").style.display = "none";
+
+        });
     } else if (selectedValue === 5) {
         document.getElementById("displayPhoto5").style.display = "block";
+        document.getElementById("faitchier").style.background = "#00244f";
+
     }
+}
+
+let boutons = document.querySelectorAll('.answer-button');
+for (let i = 0; i < boutons.length; i++) {
+    boutons[i].addEventListener('click', function() {
+        for (let i = 0; i < 40; i++) {
+            createParticle(this);
+        }
+    });
+}
+
+function createParticle(button) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    document.body.appendChild(particle);
+
+    // Position the particle on the button
+    const { top, left, width, height } = button.getBoundingClientRect();
+    const size = Math.random() * 10 + 5;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    particle.style.left = `${left + width / 2}px`;
+    particle.style.top = `${top + height / 2}px`;
+
+    // Randomize the particle's trajectory
+    const x = (Math.random() - 0.5) * 200;
+    const y = (Math.random() - 0.5) * 200;
+    particle.style.setProperty('--x', `${x}px`);
+    particle.style.setProperty('--y', `${y}px`);
+
+    // Remove the particle after animation
+    particle.addEventListener('animationend', function() {
+        particle.remove();
+    });
 }
 
 // Afficher la première question au chargement de la page
