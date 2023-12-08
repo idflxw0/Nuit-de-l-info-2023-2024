@@ -67,6 +67,7 @@ const questions = [
 ];
 
 let currentQuestionIndex = 0;
+let nbfaut = 0;
 
 function displayQuestion() {
     const questionElement = document.getElementById("question");
@@ -92,17 +93,46 @@ function checkAnswer(isCorrect) {
 
     if (isCorrect) {
         alert("Bonne réponse !\n\n" + currentQuestion.introduction);
+        currentQuestionIndex++;
     } else {
-        alert("Mauvaise réponse. Veuillez réessayer.");
+        // alert("Mauvaise réponse. Veuillez réessayer.");
+        currentQuestionIndex = 0;
+        nbfaut++;
+        changePhoto(nbfaut);
     }
 
-    currentQuestionIndex++;
 
     if (currentQuestionIndex < questions.length) {
         displayQuestion();
     } else {
         alert("Félicitations, vous avez terminé le quiz !");
         // Vous pouvez rediriger l'utilisateur vers une autre page ici
+    }
+}
+
+function changePhoto(selectedValue) {
+    document.getElementById("container").style.display = "none";
+    document.getElementById("img").style.display = "block";
+    const displayPhoto = document.getElementById("displayPhoto");
+
+    switch (selectedValue) {
+        case "1":
+            displayPhoto.src = "photo1.jpg";
+            break;
+        case "2":
+            displayPhoto.src = "photo2.jpg";
+            break;
+        case "3":
+            displayPhoto.src = "photo3.jpg";
+            break;
+        case "4":
+            displayPhoto.src = "photo4.jpg";
+            break;
+        case "5":
+            displayPhoto.src = "photo5.jpg";
+            break;
+        default:
+            displayPhoto.src = ""; // A default case, you can handle it differently based on your needs
     }
 }
 

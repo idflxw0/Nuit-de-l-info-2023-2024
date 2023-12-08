@@ -1,1 +1,36 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Question Futuristique</title><link rel="stylesheet" href="QSTStyle.css"></head><body><div id="container"><script src="../REP1.js"></script><div id="question">Parmi ces 5 propositions, quel est le gaz à effet de serre ?</div><button class="answer-button" onclick="checkAnswer(getcorrectAnswer(0))">CO2, dioxyde de carbone</button><button class="answer-button" onclick="checkAnswer(getcorrectAnswer(1))">CH4, méthane</button><button class="answer-button" onclick="checkAnswer(getcorrectAnswer(2))">N2O, protoxyde d’azote</button><button class="answer-button" onclick="checkAnswer(getcorrectAnswer(3))">Tous ces gazs</button></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Futuristique</title>
+    <link rel="stylesheet" href="QSTStyle.css">
+    <script src="../REP1.js"></script>
+
+</head>
+<body>
+<div id="container">
+
+    <div id="question">Parmi ces 5 propositions, quel est le gaz à effet de serre ?</div>
+
+    <button class="answer-button" onclick="checkAnswer(getcorrectAnswer(0))">CO2, dioxyde de carbone</button>
+    <button class="answer-button" onclick="checkAnswer(getcorrectAnswer(1))">CH4, méthane</button>
+    <button class="answer-button" onclick="checkAnswer(getcorrectAnswer(2))">N2O, protoxyde d’azote</button>
+    <button class="answer-button" onclick="checkAnswer(getcorrectAnswer(3))">Tous ces gazs</button>
+
+</div>
+
+<div id="img">
+
+    <select id="photoSelector" onchange="changePhoto()">
+        <option value="1">Photo 1</option>
+        <option value="2">Photo 2</option>
+        <option value="3">Photo 3</option>
+        <option value="4">Photo 4</option>
+        <option value="5">Photo 5</option>
+    </select>
+
+    <img id="displayPhoto" src="" alt="Selected Photo">
+</div>
+</body>
+</html>

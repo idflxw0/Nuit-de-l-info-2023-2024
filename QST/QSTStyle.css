@@ -33,3 +33,12 @@ body {
 .answer-button:hover {
     background-color: #008ba3;
 }
+
+#img {
+    display: none;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
