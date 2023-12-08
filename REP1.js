@@ -16,7 +16,6 @@ const questions = [
             "L'azote est principalement dûes à l’utilisation d’engrais azotés et des procédés chimiques.",
         nextButton: "Suivant"
     },
-    // Ajoutez d'autres questions de la même manière
 
     {
         question: "Parmi ces propositions, laquelle est une solution au changement climatique ?",
@@ -30,7 +29,41 @@ const questions = [
         nextButton: "Suivant"
     },
 
+    {
+        question: "Parmi ces propositions, pour 2050, quelle énergie a le plus de potentiel pour limiter le réchauffement ?",
+        answers: [
+            { text: "L'énergie éolienne", correct: false },
+            { text: "L’énergie nucléaire", correct: true },
+            { text: " L’énergie solaire ", correct: false },
+            { text: "L’énergie thermique", correct: false }
+        ],
+        introduction: "Actuellement à court terme, les énergies éoliennes et solaires sont celles ayant le plus de potentiel, ces énergies se sont très vite développées et sont désormais très peu coûteuses par rapport à l’énergie nucléaire, cela s’explique aussi par le fait que les progrès du nucléaire ont étés plus lent que prévus",
+        nextButton: "Suivant"
+    },
 
+    {
+        question: "Parmi ces propositions, quelle proposition permet de limiter le réchauffement climatique ?",
+        answers: [
+            { text: "réduire l’utilisation des engrais de synthèse", correct: true },
+            { text: "plus de terrain pour des éoliennes", correct: false },
+            { text: "l’énergie nucléaire contribue au réchauffement climatique", correct: false },
+            { text: "Toutes les réponses", correct: false }
+        ],
+        introduction: "En réalité, créé plus de terrain pour installer des éoliennes émet plus de gaz à effet de serre qu’on ne le pense, et l’énergie nucléaire contribue à lutter contre le réchauffement climatique",
+        nextButton: "Suivant"
+    },
+
+    {
+        question: "Parmi ces 4 secteurs, lequel est le plus polluant ?",
+        answers: [
+            { text: "secteur énergétique", correct: true },
+            { text: "secteur des transports", correct: false },
+            { text: "secteur du bâtiment ", correct: false },
+            { text: "secteur de l’agriculture", correct: false }
+        ],
+        introduction: "Le secteur énergétique est celui qui émet le plus dans le monde, il représente 41% des émissions de la planète contrairement au secteur de l’agriculture qui représente environ 15% des émissions mondiales.",
+        nextButton: "Suivant"
+    }
 ];
 
 let currentQuestionIndex = 0;
