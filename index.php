@@ -1,3 +1,3 @@
 <?php
-require("acceuile.html");
+require("accueil.html");
 ?>
